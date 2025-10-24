@@ -26,10 +26,10 @@ ob_start();
                 Mis Alojamientos Favoritos
             </h2>
             <div class="flex gap-2">
-                <a href="/CRUD/editar-perfil" class="btn btn-secondary btn-sm">
+                <a href="<?= BASE_URL ?>/editar-perfil" class="btn btn-secondary btn-sm">
                     <i class="fas fa-edit"></i> Editar Perfil
                 </a>
-                <a href="/CRUD/" class="btn btn-primary btn-sm">
+                <a href="<?= BASE_URL ?>/" class="btn btn-primary btn-sm">
                     <i class="fas fa-search"></i> Buscar Más
                 </a>
             </div>
@@ -40,7 +40,7 @@ ob_start();
                 <i class="fas fa-heart-broken"></i>
                 <h3>No tienes alojamientos favoritos</h3>
                 <p>Explora nuestra selección y guarda tus favoritos</p>
-                <a href="/CRUD/" class="btn btn-primary mt-3">
+                <a href="<?= BASE_URL ?>/" class="btn btn-primary mt-3">
                     <i class="fas fa-search"></i> Ver Alojamientos
                 </a>
             </div>
@@ -85,7 +85,7 @@ ob_start();
                             </p>
                             
                             <!-- Botón para eliminar de favoritos -->
-                            <form method="POST" action="/CRUD/eliminar-favorito" style="margin-top: 1rem;">
+                            <form method="POST" action="<?= BASE_URL ?>/eliminar-favorito" style="margin-top: 1rem;">
                                 <input type="hidden" name="accommodation_id" value="<?= $alojamiento['id'] ?>">
                                 <button type="submit" class="btn btn-danger btn-block" 
                                         onclick="return confirm('¿Estás seguro de eliminar este alojamiento de tus favoritos?')">

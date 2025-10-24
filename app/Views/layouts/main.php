@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $titulo ?? 'AlojaTEC' ?> - Plataforma de Alojamientos</title>
-    <link rel="stylesheet" href="/alojatec/public/css/styles.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="/alojatec/" class="navbar-logo">
+            <a href="<?= BASE_URL ?>/" class="navbar-logo">
                 <i class="fas fa-home"></i>
                 <span>AlojaTEC</span>
             </a>
             
             <ul class="navbar-menu">
-                <li><a href="/alojatec/">Inicio</a></li>
+                <li><a href="<?= BASE_URL ?>/">Inicio</a></li>
                 
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <?php if ($_SESSION['user_role'] === 'admin'): ?>
-                        <li><a href="/alojatec/admin"><i class="fas fa-cog"></i> Panel Admin</a></li>
+                        <li><a href="<?= BASE_URL ?>/admin"><i class="fas fa-cog"></i> Panel Admin</a></li>
                     <?php else: ?>
-                        <li><a href="/alojatec/mi-cuenta"><i class="fas fa-heart"></i> Mis Favoritos</a></li>
+                        <li><a href="<?= BASE_URL ?>/mi-cuenta"><i class="fas fa-heart"></i> Mis Favoritos</a></li>
                     <?php endif; ?>
-                    <li><a href="/alojatec/logout" class="btn-secondary"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                    <li><a href="<?= BASE_URL ?>/logout" class="btn-secondary"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
                 <?php else: ?>
-                    <li><a href="/alojatec/login">Iniciar Sesión</a></li>
-                    <li><a href="/alojatec/registro" class="btn-primary">Registrarse</a></li>
+                    <li><a href="<?= BASE_URL ?>/login">Iniciar Sesión</a></li>
+                    <li><a href="<?= BASE_URL ?>/registro" class="btn-primary">Registrarse</a></li>
                 <?php endif; ?>
             </ul>
         </div>
@@ -71,6 +71,6 @@
     </footer>
     
     <!-- Scripts JavaScript -->
-    <script src="/alojatec/public/js/app.js"></script>
+    <script src="<?= BASE_URL ?>/public/js/app.js"></script>
 </body>
 </html>

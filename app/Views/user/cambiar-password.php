@@ -15,7 +15,7 @@ ob_start();
             Cambiar Contraseña
         </h2>
         
-        <form method="POST" action="/CRUD/procesar-cambio-password">
+    <form method="POST" action="<?= BASE_URL ?>/procesar-cambio-password">
             <div class="form-group">
                 <label for="password_actual">
                     <i class="fas fa-lock"></i> Contraseña Actual
@@ -54,7 +54,7 @@ ob_start();
                 <button type="submit" class="btn btn-primary" style="flex: 1;">
                     <i class="fas fa-save"></i> Cambiar Contraseña
                 </button>
-                <a href="/CRUD/mi-cuenta" class="btn btn-secondary" style="flex: 0.5;">
+                <a href="<?= BASE_URL ?>/mi-cuenta" class="btn btn-secondary" style="flex: 0.5;">
                     <i class="fas fa-times"></i> Cancelar
                 </a>
             </div>

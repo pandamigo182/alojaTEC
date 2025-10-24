@@ -9,6 +9,12 @@
 // Iniciar sesión
 session_start();
 
+// Definir BASE_URL dinámicamente (sirve si la app está en una subcarpeta)
+$scriptName = dirname($_SERVER['SCRIPT_NAME']);
+$baseUrl = rtrim($scriptName, '/');
+// Si está en la raíz, $baseUrl quedará vacío (''), lo cual es deseable
+define('BASE_URL', $baseUrl);
+
 // Autoload de clases
 spl_autoload_register(function ($class) {
     $paths = [

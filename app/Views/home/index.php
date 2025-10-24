@@ -15,7 +15,7 @@ ob_start();
         <h1>Bienvenido a AlojaTEC</h1>
         <p>Descubre los mejores alojamientos para tu próxima aventura</p>
         <?php if (!isset($_SESSION['user_id'])): ?>
-            <a href="/CRUD/registro" class="btn btn-primary">Comienza Ahora</a>
+            <a href="<?= BASE_URL ?>/registro" class="btn btn-primary">Comienza Ahora</a>
         <?php endif; ?>
     </div>
 </section>
@@ -28,7 +28,7 @@ ob_start();
             <i class="fas fa-search"></i> Buscar y Filtrar Alojamientos
         </h3>
         
-        <form method="GET" action="/CRUD/" id="filtro-form">
+    <form method="GET" action="<?= BASE_URL ?>/" id="filtro-form">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                 <div class="form-group" style="margin-bottom: 0;">
                     <label for="busqueda" style="font-size: 0.9rem;">
@@ -100,7 +100,7 @@ ob_start();
                 <button type="submit" class="btn btn-primary">
                     <i class="fas fa-search"></i> Buscar
                 </button>
-                <a href="/CRUD/" class="btn btn-secondary">
+                <a href="<?= BASE_URL ?>/" class="btn btn-secondary">
                     <i class="fas fa-redo"></i> Limpiar Filtros
                 </a>
             </div>
@@ -158,7 +158,7 @@ ob_start();
                         </div>
                         
                         <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'user'): ?>
-                            <form method="POST" action="/CRUD/agregar-favorito" style="margin-top: 1rem;">
+                            <form method="POST" action="<?= BASE_URL ?>/agregar-favorito" style="margin-top: 1rem;">
                                 <input type="hidden" name="accommodation_id" value="<?= $alojamiento['id'] ?>">
                                 <input type="hidden" name="redirect" value="/">
                                 
@@ -173,7 +173,7 @@ ob_start();
                                 <?php endif; ?>
                             </form>
                         <?php elseif (!isset($_SESSION['user_id'])): ?>
-                            <a href="/CRUD/login" class="btn btn-primary btn-block" style="margin-top: 1rem;">
+                            <a href="<?= BASE_URL ?>/login" class="btn btn-primary btn-block" style="margin-top: 1rem;">
                                 <i class="fas fa-sign-in-alt"></i> Inicia sesión para guardar
                             </a>
                         <?php endif; ?>
@@ -224,7 +224,7 @@ ob_start();
                             <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'user'): ?>
                                 <?php if (!$reviewModel->usuarioYaComento($_SESSION['user_id'], $alojamiento['id'])): ?>
                                     <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: var(--dark-blue-900);">Deja tu reseña:</h4>
-                                    <form method="POST" action="/CRUD/agregar-resena">
+                                    <form method="POST" action="<?= BASE_URL ?>/agregar-resena">
                                         <input type="hidden" name="accommodation_id" value="<?= $alojamiento['id'] ?>">
                                         
                                         <div class="form-group" style="margin-bottom: 0.5rem;">
@@ -261,7 +261,7 @@ ob_start();
                                 <?php endif; ?>
                             <?php elseif (!isset($_SESSION['user_id'])): ?>
                                 <p style="text-align: center; margin-top: 1rem;">
-                                    <a href="/CRUD/login" style="color: var(--dark-blue-500);">Inicia sesión</a> para dejar una reseña
+                                    <a href="<?= BASE_URL ?>/login" style="color: var(--dark-blue-500);">Inicia sesión</a> para dejar una reseña
                                 </p>
                             <?php endif; ?>
                         </div>
@@ -283,11 +283,11 @@ ob_start();
                 
                 <!-- Botón Primera Página -->
                 <?php if ($pagina > 1): ?>
-                    <a href="/CRUD/?pagina=1<?= $queryString ?>" 
+                          <a href="<?= BASE_URL ?>/?pagina=1<?= $queryString ?>" 
                        class="btn btn-sm btn-secondary">
                         <i class="fas fa-angle-double-left"></i>
                     </a>
-                    <a href="/CRUD/?pagina=<?= $pagina - 1 ?><?= $queryString ?>" 
+                          <a href="<?= BASE_URL ?>/?pagina=<?= $pagina - 1 ?><?= $queryString ?>" 
                        class="btn btn-sm btn-secondary">
                         <i class="fas fa-angle-left"></i>
                     </a>
@@ -300,7 +300,7 @@ ob_start();
                 
                 for ($i = $inicio; $i <= $fin; $i++):
                 ?>
-                    <a href="/CRUD/?pagina=<?= $i ?><?= $queryString ?>" 
+                          <a href="<?= BASE_URL ?>/?pagina=<?= $i ?><?= $queryString ?>" 
                        class="btn btn-sm <?= $i === $pagina ? 'btn-primary' : 'btn-secondary' ?>"
                        style="min-width: 40px;">
                         <?= $i ?>
@@ -309,11 +309,11 @@ ob_start();
                 
                 <!-- Botón Última Página -->
                 <?php if ($pagina < $totalPaginas): ?>
-                    <a href="/CRUD/?pagina=<?= $pagina + 1 ?><?= $queryString ?>" 
+                          <a href="<?= BASE_URL ?>/?pagina=<?= $pagina + 1 ?><?= $queryString ?>" 
                        class="btn btn-sm btn-secondary">
                         <i class="fas fa-angle-right"></i>
                     </a>
-                    <a href="/CRUD/?pagina=<?= $totalPaginas ?><?= $queryString ?>" 
+                          <a href="<?= BASE_URL ?>/?pagina=<?= $totalPaginas ?><?= $queryString ?>" 
                        class="btn btn-sm btn-secondary">
                         <i class="fas fa-angle-double-right"></i>
                     </a>

@@ -15,7 +15,7 @@ ob_start();
             Editar Mi Perfil
         </h2>
         
-        <form method="POST" action="/CRUD/actualizar-perfil">
+    <form method="POST" action="<?= BASE_URL ?>/actualizar-perfil">
             <div class="form-group">
                 <label for="name">
                     <i class="fas fa-user"></i> Nombre Completo
@@ -42,7 +42,7 @@ ob_start();
                 <button type="submit" class="btn btn-primary" style="flex: 1;">
                     <i class="fas fa-save"></i> Guardar Cambios
                 </button>
-                <a href="/CRUD/mi-cuenta" class="btn btn-secondary" style="flex: 0.5;">
+                <a href="<?= BASE_URL ?>/mi-cuenta" class="btn btn-secondary" style="flex: 0.5;">
                     <i class="fas fa-times"></i> Cancelar
                 </a>
             </div>
@@ -51,7 +51,7 @@ ob_start();
         <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--light-gray);">
         
         <div class="text-center">
-            <a href="/CRUD/cambiar-password" class="btn btn-secondary btn-sm">
+            <a href="<?= BASE_URL ?>/cambiar-password" class="btn btn-secondary btn-sm">
                 <i class="fas fa-key"></i> Cambiar Contraseña
             </a>
         </div>
