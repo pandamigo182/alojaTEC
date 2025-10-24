@@ -15,7 +15,7 @@ ob_start();
             Editar Alojamiento
         </h2>
         
-        <form method="POST" action="/CRUD/admin/procesar-editar">
+    <form method="POST" action="<?= BASE_URL ?>/admin/procesar-editar">
             <input type="hidden" name="id" value="<?= $alojamiento['id'] ?>">
             
             <div class="form-group">
@@ -103,7 +103,7 @@ ob_start();
                 <button type="submit" class="btn btn-primary" style="flex: 1;">
                     <i class="fas fa-save"></i> Actualizar Alojamiento
                 </button>
-                <a href="/CRUD/admin" class="btn btn-secondary" style="flex: 0.5;">
+                <a href="<?= BASE_URL ?>/admin" class="btn btn-secondary" style="flex: 0.5;">
                     <i class="fas fa-times"></i> Cancelar
                 </a>
             </div>

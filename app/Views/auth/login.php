@@ -14,7 +14,7 @@ ob_start();
         Iniciar Sesión
     </h2>
     
-    <form method="POST" action="/CRUD/login-post">
+    <form method="POST" action="<?= BASE_URL ?>/login-post">
         <div class="form-group">
             <label for="email">
                 <i class="fas fa-envelope"></i> Correo Electrónico
@@ -45,7 +45,7 @@ ob_start();
     
     <p class="text-center mt-3">
         ¿No tienes cuenta? 
-        <a href="/CRUD/registro" style="color: var(--dark-blue-500); font-weight: bold;">
+        <a href="<?= BASE_URL ?>/registro" style="color: var(--dark-blue-500); font-weight: bold;">
             Regístrate aquí
         </a>
     </p>

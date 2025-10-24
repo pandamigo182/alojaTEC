@@ -14,7 +14,7 @@ ob_start();
         Crear Cuenta Nueva
     </h2>
     
-    <form method="POST" action="/CRUD/registro-post">
+    <form method="POST" action="<?= BASE_URL ?>/registro-post">
         <div class="form-group">
             <label for="name">
                 <i class="fas fa-user"></i> Nombre Completo
@@ -69,7 +69,7 @@ ob_start();
     
     <p class="text-center mt-3">
         ¿Ya tienes cuenta? 
-        <a href="/CRUD/login" style="color: var(--dark-blue-500); font-weight: bold;">
+        <a href="<?= BASE_URL ?>/login" style="color: var(--dark-blue-500); font-weight: bold;">
             Inicia sesión aquí
         </a>
     </p>

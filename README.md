@@ -88,7 +88,7 @@ En XAMPP, el archivo `.htaccess` ya está configurado correctamente.
 
 Abre tu navegador y visita:
 ```
-http://localhost/CRUD/
+http://localhost/alojatec/
 ```
 
 ---
@@ -100,14 +100,14 @@ http://localhost/CRUD/
 - **Contraseña:** admin123
 
 ### Crear Usuario Normal:
-Usa el formulario de registro en: `http://localhost/CRUD/registro`
+Usa el formulario de registro en: `http://localhost/alojatec/registro`
 
 ---
 
 ## 📂 Estructura del Proyecto
 
 ```
-CRUD/
+alojatec/
 ├── app/
 │   ├── Controllers/          # Controladores MVC
 │   │   ├── AccommodationController.php
@@ -217,7 +217,7 @@ El proyecto utiliza una paleta de colores morada/azul definida en CSS:
 ### Problema: Los estilos CSS no cargan
 **Solución:** Verifica la ruta en `layouts/main.php`:
 ```php
-<link rel="stylesheet" href="/CRUD/public/css/styles.css">
+<link rel="stylesheet" href="/alojatec/public/css/styles.css">
 ```
 
 ---

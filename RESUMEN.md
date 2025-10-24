@@ -145,11 +145,11 @@ Crear uno nuevo usando el formulario de registro.
 
 ### Instalación Rápida (5 minutos):
 
-1. **Copiar proyecto** a `C:\xampp\htdocs\CRUD\`
+1. **Copiar proyecto** a `C:\xampp\htdocs\alojatec\`
 2. **Iniciar XAMPP** (Apache + MySQL)
 3. **Abrir phpMyAdmin:** `http://localhost/phpmyadmin`
 4. **Importar** `database.sql`
-5. **Visitar:** `http://localhost/CRUD/`
+5. **Visitar:** `http://localhost/alojatec/`
 
 ### Guía Detallada:
 Ver archivo `INSTALACION.md` para instrucciones paso a paso.

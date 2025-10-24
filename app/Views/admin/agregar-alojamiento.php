@@ -15,7 +15,7 @@ ob_start();
             Agregar Nuevo Alojamiento
         </h2>
         
-        <form method="POST" action="/CRUD/admin/procesar-agregar">
+    <form method="POST" action="<?= BASE_URL ?>/admin/procesar-agregar">
             <div class="form-group">
                 <label for="name">
                     <i class="fas fa-building"></i> Nombre del Alojamiento *
@@ -101,7 +101,7 @@ ob_start();
                 <button type="submit" class="btn btn-primary" style="flex: 1;">
                     <i class="fas fa-save"></i> Guardar Alojamiento
                 </button>
-                <a href="/CRUD/admin" class="btn btn-secondary" style="flex: 0.5;">
+                <a href="<?= BASE_URL ?>/admin" class="btn btn-secondary" style="flex: 0.5;">
                     <i class="fas fa-times"></i> Cancelar
                 </a>
             </div>

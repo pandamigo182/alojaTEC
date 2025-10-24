@@ -25,12 +25,12 @@ Antes de comenzar, asegúrate de tener instalado:
 
 1. **Copia la carpeta del proyecto** a la carpeta `htdocs` de XAMPP:
    ```
-   C:\xampp\htdocs\CRUD\
+   C:\xampp\htdocs\alojatec\
    ```
 
 2. **Verifica que la estructura sea correcta:**
    ```
-   C:\xampp\htdocs\CRUD\
+   C:\xampp\htdocs\alojatec\
    ├── app/
    ├── config/
    ├── public/
@@ -84,7 +84,7 @@ Antes de comenzar, asegúrate de tener instalado:
 1. Abre XAMPP Shell
 2. Ejecuta:
    ```bash
-   mysql -u root -p < C:\xampp\htdocs\CRUD\database.sql
+   mysql -u root -p < C:\xampp\htdocs\alojatec\database.sql
    ```
 3. Presiona Enter (sin contraseña si es instalación por defecto)
 
@@ -94,7 +94,7 @@ Antes de comenzar, asegúrate de tener instalado:
 
 1. **Abre el archivo:**
    ```
-   C:\xampp\htdocs\CRUD\config\database.php
+   C:\xampp\htdocs\alojatec\config\database.php
    ```
 
 2. **Verifica los datos de conexión:**
@@ -142,7 +142,7 @@ El proyecto usa URLs amigables, por lo que necesitas `mod_rewrite` habilitado.
 
 2. **Visita:**
    ```
-   http://localhost/CRUD/
+   http://localhost/alojatec/
    ```
 
 3. **Deberías ver:**
@@ -227,7 +227,7 @@ El proyecto usa URLs amigables, por lo que necesitas `mod_rewrite` habilitado.
 
 **Solución:**
 1. Verifica que la carpeta `public/css/styles.css` exista
-2. Abre el navegador y ve a: `http://localhost/CRUD/public/css/styles.css`
+2. Abre el navegador y ve a: `http://localhost/alojatec/public/css/styles.css`
 3. Deberías ver el código CSS. Si ves un error 404, revisa la estructura de carpetas
 
 ---

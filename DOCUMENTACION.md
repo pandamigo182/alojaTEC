@@ -9,7 +9,7 @@ AlojaTEC está construido siguiendo el patrón **MVC (Modelo-Vista-Controlador)*
 ## 📂 Estructura de Carpetas Detallada
 
 ```
-CRUD/
+alojatec/
 │
 ├── app/                          # Lógica de la aplicación
 │   ├── Controllers/              # Controladores (lógica de negocio)
@@ -64,7 +64,7 @@ Usuario → index.php (Router) → Controlador → Modelo → Base de Datos
 
 ### Ejemplo: Ver alojamientos
 
-1. **Usuario** visita: `http://localhost/CRUD/`
+1. **Usuario** visita: `http://localhost/alojatec/`
 2. **index.php** recibe la petición y enruta a `AccommodationController::index()`
 3. **Controlador** llama a `Accommodation::obtenerTodos()`
 4. **Modelo** consulta la base de datos con PDO

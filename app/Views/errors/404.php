@@ -16,7 +16,7 @@ ob_start();
         <p style="font-size: 1.1rem; color: var(--gray); margin-bottom: 2rem;">
             Lo sentimos, la página que buscas no existe o ha sido movida.
         </p>
-        <a href="/CRUD/" class="btn btn-primary">
+        <a href="<?= BASE_URL ?>/" class="btn btn-primary">
             <i class="fas fa-home"></i> Volver al Inicio
         </a>
     </div>

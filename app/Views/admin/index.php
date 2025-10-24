@@ -43,7 +43,7 @@ ob_start();
                 <i class="fas fa-list"></i>
                 Todos los Alojamientos
             </h2>
-            <a href="/CRUD/admin/agregar-alojamiento" class="btn btn-primary">
+            <a href="<?= BASE_URL ?>/admin/agregar-alojamiento" class="btn btn-primary">
                 <i class="fas fa-plus-circle"></i> Agregar Nuevo Alojamiento
             </a>
         </div>
@@ -53,7 +53,7 @@ ob_start();
                 <i class="fas fa-home"></i>
                 <h3>No hay alojamientos registrados</h3>
                 <p>Comienza agregando tu primer alojamiento</p>
-                <a href="/CRUD/admin/agregar-alojamiento" class="btn btn-primary mt-3">
+                <a href="<?= BASE_URL ?>/admin/agregar-alojamiento" class="btn btn-primary mt-3">
                     <i class="fas fa-plus-circle"></i> Agregar Alojamiento
                 </a>
             </div>
@@ -93,13 +93,13 @@ ob_start();
                                 </td>
                                 <td style="padding: 1rem; text-align: center;">
                                     <div style="display: flex; gap: 0.5rem; justify-content: center;">
-                                        <a href="/CRUD/admin/editar-alojamiento?id=<?= $alojamiento['id'] ?>" 
+                                                     <a href="<?= BASE_URL ?>/admin/editar-alojamiento?id=<?= $alojamiento['id'] ?>" 
                                            class="btn btn-sm btn-secondary"
                                            title="Editar">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form method="POST" 
-                                              action="/CRUD/admin/eliminar-alojamiento" 
+                            <form method="POST" 
+                                action="<?= BASE_URL ?>/admin/eliminar-alojamiento" 
                                               style="display: inline;"
                                               onsubmit="return confirm('¿Estás seguro de eliminar este alojamiento? Esta acción no se puede deshacer.');">
                                             <input type="hidden" name="id" value="<?= $alojamiento['id'] ?>">
