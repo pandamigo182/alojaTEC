@@ -1,0 +1,82 @@
+# Configuración de Git Ignore para AlojaTEC
+
+# ===================================
+# Archivos de Configuración
+# ===================================
+config/database.php
+
+# ===================================
+# Logs y Debug
+# ===================================
+*.log
+error_log
+debug.log
+php_error.log
+
+# ===================================
+# IDE y Editores
+# ===================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===================================
+# Archivos Temporales
+# ===================================
+*.tmp
+*.temp
+*.cache
+.htaccess.backup
+*.bak
+
+# ===================================
+# Dependencias (si usas Composer)
+# ===================================
+/vendor/
+composer.lock
+
+# ===================================
+# Node Modules (si usas npm)
+# ===================================
+node_modules/
+package-lock.json
+
+# ===================================
+# Archivos de Sistema
+# ===================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===================================
+# Imágenes Subidas por Usuarios
+# ===================================
+public/images/uploads/
+public/images/temp/
+
+# ===================================
+# Backups de Base de Datos
+# ===================================
+*.sql.gz
+*.sql.zip
+backup/
+backups/
+
+# ===================================
+# Archivos de Sesión
+# ===================================
+/tmp/
+/temp/
+sessions/
+
+# ===================================
+# Documentos Personales
+# ===================================
+notas.txt
+TODO_PERSONAL.md
