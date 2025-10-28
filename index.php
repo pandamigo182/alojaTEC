@@ -9,11 +9,10 @@
 // Iniciar sesión
 session_start();
 
-// Definir BASE_URL dinámicamente (sirve si la app está en una subcarpeta)
-$scriptName = dirname($_SERVER['SCRIPT_NAME']);
-$baseUrl = rtrim($scriptName, '/');
-// Si está en la raíz, $baseUrl quedará vacío (''), lo cual es deseable
-define('BASE_URL', $baseUrl);
+// Cargar configuración de la aplicación (BASE_URL, etc.)
+$appConfig = require_once __DIR__ . '/config/app.php';
+// Definir constante para ser usada en vistas
+define('BASE_URL', $appConfig['base_url'] ?? '');
 
 // Autoload de clases
 spl_autoload_register(function ($class) {
@@ -85,22 +84,38 @@ $routes = [
 ];
 
 // Verificar si la ruta existe
+// Verificar si la ruta existe
 if (isset($routes[$requestUri])) {
     $route = $routes[$requestUri];
     $controllerName = $route['controller'];
     $methodName = $route['method'];
-    
-    // Instanciar el controlador y llamar al método
-    try {
-        $controller = new $controllerName();
-        $controller->$methodName();
-    } catch (Exception $e) {
-        // Log del error
-        error_log("Error en ruta $requestUri: " . $e->getMessage());
-        
-        // Mostrar página de error
+
+    // Verificar existencia de la clase y el método antes de instanciar
+    if (!class_exists($controllerName)) {
+        error_log("Controlador no encontrado: $controllerName para la ruta $requestUri");
         http_response_code(500);
-        echo "Error interno del servidor. Por favor, intenta más tarde.";
+        require_once __DIR__ . '/app/Views/errors/500.php';
+        exit;
+    }
+
+    // Instanciar el controlador
+    $controller = new $controllerName();
+
+    if (!method_exists($controller, $methodName)) {
+        error_log("Método no encontrado: $controllerName::$methodName para la ruta $requestUri");
+        http_response_code(500);
+        require_once __DIR__ . '/app/Views/errors/500.php';
+        exit;
+    }
+
+    // Llamar al método y manejar excepciones internas
+    try {
+        $controller->$methodName();
+    } catch (Throwable $e) {
+        // Registrar y mostrar página de error 500
+        error_log("Excepción al ejecutar $controllerName::$methodName - " . $e->getMessage());
+        http_response_code(500);
+        require_once __DIR__ . '/app/Views/errors/500.php';
     }
 } else {
     // Ruta no encontrada - 404
