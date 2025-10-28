@@ -299,6 +299,16 @@ class AdminController {
      * @param string $url URL de destino
      */
     private function redirigir($url) {
+        if (preg_match('/^https?:\/\//', $url)) {
+            header("Location: $url");
+            exit;
+        }
+
+        if (strpos($url, '/') === 0) {
+            $base = defined('BASE_URL') ? rtrim(BASE_URL, '/') : '';
+            $url = $base === '' ? $url : $base . $url;
+        }
+
         header("Location: $url");
         exit;
     }

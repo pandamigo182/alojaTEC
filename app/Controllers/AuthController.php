@@ -232,6 +232,18 @@ class AuthController {
      * @param string $url URL de destino
      */
     private function redirigir($url) {
+        // Si la URL es completa (http://...) no la modificamos
+        if (preg_match('/^https?:\/\//', $url)) {
+            header("Location: $url");
+            exit;
+        }
+
+        // Si la URL empieza con '/', anteponer BASE_URL si está definido
+        if (strpos($url, '/') === 0) {
+            $base = defined('BASE_URL') ? rtrim(BASE_URL, '/') : '';
+            $url = $base === '' ? $url : $base . $url;
+        }
+
         header("Location: $url");
         exit;
     }
