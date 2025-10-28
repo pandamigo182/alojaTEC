@@ -266,3 +266,9 @@ Si encuentras algún problema no listado aquí:
 ---
 
 **¡Disfruta explorando AlojaTEC! 🏡✨**
+
+---
+
+## 🔒 Nota de seguridad
+
+Se han eliminado del repositorio los scripts auxiliares de desarrollo (por ejemplo para crear usuarios de prueba o resetear contraseñas). Para gestionar datos de prueba utiliza `database.sql` y herramientas como phpMyAdmin en tu entorno local.

@@ -272,3 +272,9 @@ Este proyecto fue creado con fines educativos como proyecto final de curso.
 ---
 
 **¡Gracias por revisar AlojaTEC! 🏡✨**
+
+---
+
+## 🔒 Nota de seguridad
+
+Se eliminaron del repositorio los scripts auxiliares usados durante el desarrollo (por ejemplo para crear usuarios de prueba o resetear contraseñas). Para gestionar datos de prueba o cuentas utiliza `database.sql` y herramientas como phpMyAdmin en tu entorno local. Estos scripts no deben usarse en producción.

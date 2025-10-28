@@ -296,3 +296,9 @@ El código es limpio, está bien documentado, sigue las mejores prácticas de se
 - El proyecto es extensible y escalable
 
 **Estado Final: ✅ LISTO PARA ENTREGA**
+
+---
+
+## 🔒 Nota de seguridad
+
+Se han eliminado los scripts auxiliares del repositorio para evitar riesgos en entornos locales o de producción. Para gestionar datos de prueba utiliza `database.sql` y herramientas seguras como phpMyAdmin.

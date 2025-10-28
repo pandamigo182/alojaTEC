@@ -429,3 +429,9 @@ $_SESSION['old_input']        // Datos del formulario anterior
 ---
 
 **Documentación creada para AlojaTEC v1.0**
+
+---
+
+## 🔒 Nota de seguridad
+
+Se han eliminado del repositorio los scripts auxiliares de desarrollo. Para tareas de carga de datos o administración en local utiliza `database.sql` y herramientas como phpMyAdmin. Evita ejecutar scripts sin revisar su contenido en entornos de producción.
