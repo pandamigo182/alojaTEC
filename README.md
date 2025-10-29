@@ -9,8 +9,8 @@
 **AlojaTEC** es una aplicación web desarrollada en PHP 8 puro con arquitectura MVC para gestionar alojamientos. Los usuarios pueden registrarse, explorar alojamientos y guardar sus favoritos. Los administradores tienen la capacidad de agregar nuevos alojamientos a la plataforma.
 
 **Desarrollado por:** Edwin Efrain Juárez Mezquita, Jesua Donovan Martínez Martínez, Daniel de Jesus Vaquerano Mendoza
+
 **Rol:** Full Stack Jr - 31  
-**Proyecto:** Final de Curso
 
 ---
 
