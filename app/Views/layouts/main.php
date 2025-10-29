@@ -66,7 +66,7 @@
     
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; <?= date('Y') ?> AlojaTEC - Desarrollado por Edwin Efrain Juárez Mezquita</p>
+        <p>&copy; <?= date('Y') ?> AlojaTEC - Desarrollado por Edwin Efrain Juárez Mezquita, Jesua Donovan Martínez Martínez, Daniel de Jesus Vaquerano Mendoza </p>
         <p>Plataforma de Gestión de Alojamientos</p>
     </footer>
     
